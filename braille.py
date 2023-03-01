@@ -43,18 +43,15 @@ try:
         print('got here0')
         bytes_data = uploaded_file.getvalue()
         # st.write(bytes_data)
-        print('got here1')
+        # print('got here1')
         # bytes_data = bytes_data.getvalue()
-        print('got here 1.5')
+        # print('got here 1.5')
         cv2_imgg = cv2.imdecode(np.frombuffer(bytes_data, np.uint8), cv2.IMREAD_COLOR)
 
-        print('got here2')
+        # print('got here2')
         new_model = load_model('brailleclassifierr1.h5',
                                compile=False)
         print('got here2')
-
-
-
         trigger = st.button('Predict', on_click=predict_upload)
     else:
         print('no image')
